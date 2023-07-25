@@ -1,0 +1,486 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* ------------------------------------------NAV BAR */
+.nav{
+    height: 44px;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.85);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+}
+.nav-ul{
+    list-style: none;
+    display: flex;
+    color: rgb(176, 176, 176);
+    justify-content: center;
+    gap: 22px;
+    font-size: small;
+    font-weight: lighter;
+}
+.nav-li a{
+    color: rgb(175, 174, 174);
+    text-decoration: none;
+}
+.nav-li a:hover{
+    color: rgb(226, 226, 226);
+}
+.nav-symbol-container{
+    display: flex;
+    gap: 22px;
+}
+/* ------------------------------------------------------------------------NAV BAR END*/
+
+/* ------------------------------------------------------------------------Body sections */
+.blue-text{                         /*to give blue text*/    
+    color: rgb(97, 97, 255);        
+}
+.white-text{
+    color: white;
+}
+.no-underline{                      /*to remove underline*/
+    text-decoration: none;
+}
+.hover-underline:hover{             /*to give underline on hover*/
+    text-decoration: underline;
+}
+.nored-blacktext{                   /*to remove the red colour on click*/
+    color: inherit; 
+}
+.wide-image{                        /*for the wide image*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+.small-image{
+    object-fit: cover;
+    object-position: center;
+}
+.over-image{                        /*for the elemets to come over the wide image*/
+    position: absolute;
+    top: 60px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.swiped{
+    position: absolute;
+    top: 320px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.swiped-imgtext{
+    width: 450px;
+    padding-block: 20px;
+}
+.big-h2-text{                          /*for the h2 over the wide image*/
+    font-size: 50px; 
+    text-align: center;
+}
+.big-h3-text{                          /*for the h3 over the wide image*/
+    font-size: 24px; 
+    font-weight: lighter;
+    text-align: center;
+}
+.big-h4-text{
+    font-size: 35px; 
+    text-align: center;
+}
+.big-h5-text{
+    font-size: 20px; 
+    font-weight: lighter;
+    padding-block-start: 10px;
+    text-align: center;
+}
+.div-purchase{                         /*to give gap between two purchase links and increase gap between the top h3*/
+    display: flex;
+    gap: 45px;
+    padding-block-start: 12px;
+}
+.div-purchase-text{                       /*to increase the font size of the purchase links*/
+    font-size: 20px;
+}
+.gray-div{                              /*for gray colour div*/
+    background-color:  #FAFAFA;
+}
+.black-div{                             /*for black colour div*/
+    background-color: black;
+}
+.white-div{                             /*for white colour div*/
+    background-color: white;
+}
+.hero-container{
+    width: 100vw;
+    height: 590px;
+    position: relative;
+}
+
+
+/* ------------------------------------------SECTION1 SAVINGS */
+.savings{
+    margin-top: 44px;
+    height: 49px;
+    width: 100vw;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 30px;
+}
+.savings-text{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* --------------------------------------PRODUCTS SECTION USING GRID */
+.products-main-div{
+    padding-inline: 11px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 530px 530px 530px;
+    gap: 11PX;
+    grid-template-areas: 
+                        "product-1 product-2"
+                        "product-3 product-4"
+                        "product-5 product-6";
+}
+.product-1{
+    grid-area: product-1;
+}
+.product-2{
+    grid-area: product-2;
+}
+.product-3{
+    grid-area: product-3;
+}
+.product-4{
+    grid-area: product-4;
+}
+.product-5{
+    grid-area: product-5;
+}
+.product-6{
+    grid-area: product-6;
+}
+
+.products-sub{       /*to the product sub div to make the position relative*/
+    position: relative;
+}
+.product-text{      /*the text over the produt image*/
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product1img-container{  /*the a tag which contains the product image*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+}
+
+
+.product1-img{           /*the image in the a tag in product div 1*/
+    width: 85%;
+    position: relative;
+    top: 20px;
+}
+
+.product2{              /*the image in the product div2*/
+    
+    height: 500px;
+    object-fit: cover;
+    object-position: center; 
+}
+.product2img-container{  /*for product 2and 3 and 4*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.product4{
+    width: 350px;
+    position: relative;
+    top: 200px;
+    width: 350px;
+
+}
+.chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product6{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+.hide-overflow{
+    overflow: hidden;
+}
+.trade-in{  /*only for the trade in div*/
+    background-image: url("product6crop.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+/* ------------------------------------------------------------------------carousel start */
+
+.appletv{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider{
+    width: 700vw;
+    height: 700px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+}
+.slide{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    animation: appletv 160s linear 0s infinite normal forwards;
+}
+.slide img{
+    height: 700px;
+    padding: 0 10px 0 10px;
+}
+.atv-img-container{
+    position: relative;
+    z-index: 1;
+}
+.atv-btn-container{
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 150px;
+    height: 45px;
+    position: absolute;
+    top: 600px;
+    left: 50px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.atv-button{
+    font-weight: bold;
+}
+.atv-text{
+    position: absolute;
+    top: 615px;
+    left: 230px;
+    z-index: 5;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+@keyframes appletv {
+0% {transform: translateX(0);}
+100% {transform: translateX(-100%);}
+  }
+/* ------------------------------------------------------------------------carousel end */
+
+
+/* ------------------------------------------------------------------------FOOTER secton */
+footer{
+    background-color: #F5F5F7;
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    background-color: #F5F5F7;
+    width: 65%;
+}
+.footer-paragraph{
+    color: #818181;
+    padding-block-start: 20px;
+    font-size: 13px;
+    line-height: 1.25;
+}
+.footer-li a{
+    color: #818181;
+    font-size: 13px;
+    line-height: 1.75;
+}
+.footer-ul{
+    list-style: none;
+    line-height: 1.5;
+}
+.footer-ul-heading{
+    font-size: 13px;
+    color: #6a6a6a;
+    padding-block-end: 10px;
+}
+.footer-lists{
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+                        "list1 list2 list3 list4 list5";
+}
+.footer-li1{
+    grid-area: list1;
+}
+.footer-li2{
+    grid-area: list2;
+}
+.footer-li3{
+    grid-area: list3;
+}
+.footer-li4{
+    grid-area: list4;
+}
+.footer-li5{
+    grid-area: list5;
+}
+.shoplink{
+    color: rgb(97, 97, 255); 
+}
+.privacy{
+    padding-inline: 10px;
+}
+.footer-privacy{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+                        "privacy1 privacy2 privacy3";
+    padding-block-end: 20px;
+}
+.privacy1{
+    grid-area: privacy1;
+}
+.privacy2{
+    grid-area: privacy2;
+}
+.privacy3{
+    grid-area: privacy3;
+    display: flex;
+    justify-content: flex-end;
+}
+/* ------------------------------------------------------------------------FOOTER end */
+
+/* ------------------------------------------------------------------------media query */
+@media(min-width:735px){                       /*big screen*/
+    .nav-collapse-div{               /*to hide the hamberger icon*/
+        display: none;
+    }
+    .wide-image2{
+        display: none;    
+    }
+    /*changes*/
+    .small-poster{
+        display: none;
+    }
+    /*changes*/
+}
+
+
+@media(max-width:735px){                       /*small screen*/
+    .nav{                                      /*to style the icons*/
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 20px 45px;
+    }
+    .nav-ul{                                    /*to hide the nav bar ul*/
+        display: none;
+    }
+    .big-h4-text{
+        font-size: 33px;
+    }
+    .savings-text{
+        font-size: 12px;
+    }
+    .wide-image1{
+        display: none;
+    }
+    .swiped-imgtext{
+        width: 390px;
+    }
+    .products-main-div{             /*rearrange products */
+        grid-template-columns: 1fr;
+        grid-template-rows: 530px 530px 530px 530px 530px 530px;
+        grid-template-areas:
+                    "product-1"
+                    "product-2"
+                    "product-3"
+                    "product-4"
+                    "product-5"
+                    "product-6";
+    }
+    .big-poster{
+        display: none;
+    }
+    .atv-text{
+        display: none;
+    }
+    .small-screen-setting{
+        font-size: 16px;
+    }
+    .atv-btn-container{
+        display: none;
+    }
+
+}
+@media(max-width:1150px){
+    .footer-lists{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+                            "list1" 
+                            "list2"
+                            "list3"
+                            "list4"
+                            "list5";
+    }
+    .footer{
+        width: 100%;
+        padding-inline: 20px;
+        padding-block-start: 20px;
+    }
+    .appletv{
+        height: 500px;
+    }
+    .slider{
+        height: 500px;
+    }
+    .slide{
+        height: 500px;
+    }
+    .slide img{
+        height: 500px;
+    }
+    .atv-btn-container{
+        top: 400px;
+    }
+    .atv-text{
+        top: 415px;
+    }
+}
